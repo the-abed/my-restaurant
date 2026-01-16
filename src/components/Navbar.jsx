@@ -7,10 +7,10 @@ const Navbar = () => {
       <h2 className="font-bold  text-blue-500">Restaurant</h2>
       <ul className="flex gap-5">
         <Link href="/foods">
-          <li>Foods</li>
+          <li className="btn">Foods</li>
         </Link>
         <Link href="/reviews">
-          <li>Reviews</li>
+          <li className="btn">Reviews</li>
         </Link>
       </ul>
     </div>
