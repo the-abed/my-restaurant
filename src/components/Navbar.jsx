@@ -5,12 +5,12 @@ const Navbar = () => {
   return (
     <div className="px-5 py-4 flex justify-between gap-5 bg-stone-800">
       <Link href="/"><span className="text-2xl font-bold text-yellow-500">Restaurant</span></Link>
-      <ul className="flex gap-5">
+      <ul className="flex gap-4">
         <Link href="/foods">
-          <li className="btn">Foods</li>
+          <li className="btn font-semibold">Foods</li>
         </Link>
         <Link href="/reviews">
-          <li className="btn">Reviews</li>
+          <li className="btn font-semibold">Reviews</li>
         </Link>
       </ul>
     </div>
