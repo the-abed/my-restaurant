@@ -1,50 +1,38 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
 
-const FoodCard = ({ item }) => {
-  const { title, foodImg, price, category } = item;
+import style from "@/app/foods/foods.module.css";
+import CartButton from "../buttons/CartButton";
+
+export default function FoodCard({ item: food }) {
+  const { title, foodImg, category, price, id } = food;
 
   return (
-    <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200 transition-transform hover:scale-[1.02]">
-      {/* Food Image */}
-      <div className="relative h-48 w-full overflow-hidden">
-        <img 
-          src={foodImg} 
-          alt={title} 
-          className="w-full h-full object-cover"
-        />
-        <span className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-700 shadow-sm">
-          {category}
-        </span>
-      </div>
+    <div
+      className={`border rounded-xl p-4 shadow hover:shadow-lg transition ${style.bgred}`}
+    >
+      <img
+        src={foodImg}
+        alt={title}
+        className="w-full h-44 object-cover rounded-lg"
+      />
 
-      {/* Content */}
-      <div className="p-5">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="text-xl font-bold text-gray-800 leading-tight">
-            {title}
-          </h3>
-          <span className="text-lg font-extrabold text-green-600">
-            ${price}
-          </span>
-        </div>
+      <div className="mt-3">
+        <h2 className="text-lg font-semibold">{title}</h2>
+        <p className="text-sm text-gray-500">{category}</p>
 
-        <p className="text-gray-500 text-sm mb-6">
-          Delicious {category.toLowerCase()} dish prepared with fresh ingredients.
-        </p>
+        <p className="text-xl font-bold mt-2">{price}৳</p>
 
-        {/* Action Buttons */}
-        <div className="flex gap-3">
-          <button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
-            Add to Cart
-          </button>
-          <Link href={`/foods/${item.id}`} className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors border border-gray-300 text-center">
-          View Details
+        <div className="flex gap-3 mt-4">
+          <CartButton food={food}></CartButton>
+
+          <Link
+            href={`/foods/${id}`}
+            className="flex-1 border border-gray-300 py-2 rounded-lg hover:bg-gray-100 text-center"
+          >
+            View Details
           </Link>
         </div>
       </div>
     </div>
   );
-};
-
-export default FoodCard;
+}
