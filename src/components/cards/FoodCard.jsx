@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const FoodCard = ({ item }) => {
@@ -37,9 +38,9 @@ const FoodCard = ({ item }) => {
           <button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
             Add to Cart
           </button>
-          <button className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors border border-gray-300">
-            Details
-          </button>
+          <Link href={`/foods/${item.id}`} className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors border border-gray-300 text-center">
+          View Details
+          </Link>
         </div>
       </div>
     </div>
