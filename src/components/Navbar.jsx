@@ -3,8 +3,8 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="px-5 py-4 flex justify-between gap-5 bg-stone-800">
-      <Link href="/"><span className="text-2xl font-bold text-yellow-500">Restaurant</span></Link>
+    <div className="px-5 py-4 flex justify-between gap-5 bg-stone-900">
+      <Link href="/"><span className="text-2xl font-bold text-yellow-500">🍟My Restarant🧋</span></Link>
       <ul className="flex gap-4">
         <Link href="/foods">
           <li className="btn font-semibold">Foods</li>
