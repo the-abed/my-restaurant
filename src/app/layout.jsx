@@ -25,11 +25,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CartProvider>
-          <header><Navbar></Navbar></header>
-          <main className="container mx-auto px-5 py-10">
-
-          {children}
-          </main>
+          <header>
+            <Navbar></Navbar>
+          </header>
+          <main className="container mx-auto px-5 py-10">{children}</main>
         </CartProvider>
       </body>
     </html>

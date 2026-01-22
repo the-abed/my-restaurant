@@ -15,13 +15,22 @@ const FoodsPage =async () => {
         <div>
            <h2 className="text-4xl font-bold">Total Foods <span className="text-yellow-500">{foods.length}</span> Found</h2> 
 
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
+        <div className='flex gap-4 mt-5'>
+
+           <div className="flex-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5">
             {
                 foods.map((food) => (
                     <FoodCard key={food.id} item={food}></FoodCard>
                 ))
             }
            </div>
+
+            <div className='w-[250px] border-2 rounded-2xl'>
+                <h2 className="text-2xl font-bold text-center py-2">Cart Items</h2>
+                <hr />
+            </div>
+
+        </div>
         </div>
     );
 };

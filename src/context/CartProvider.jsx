@@ -8,12 +8,14 @@ const CartProvider = ({ children }) => {
   const addToCart = (item) => {
     setCart([item, ...cart]);
   };
-  
+
   const cartInfo = {
     addToCart,
     cart,
   };
-  return <CartContext.Provider value={cartInfo}>{children}</CartContext.Provider>;
+  return (
+    <CartContext.Provider value={cartInfo}>{children}</CartContext.Provider>
+  );
 };
 
 export default CartProvider;
