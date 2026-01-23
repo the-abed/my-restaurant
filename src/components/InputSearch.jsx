@@ -23,9 +23,9 @@ const InputSearch = () => {
           type="text"
           name="search"
           placeholder="Search"
-          className="border-2 rounded-2xl px-4 py-2"
+          className="border-2 rounded-2xl px-4 py-2 "
         />
-        <button type="submit" className="btn">
+        <button type="submit" className="bg-yellow-500 px-4 py-2 rounded-2xl">
           Search
         </button>
       </form>
