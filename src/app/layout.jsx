@@ -12,9 +12,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
+// Dynamic Metadata
 export const metadata = {
-  title: "My Restaurant",
+  title: {
+    default: "My Restaurant",
+    template: "%s | My Restaurant",
+  },
   description: "Get your favorite foods",
 };
 

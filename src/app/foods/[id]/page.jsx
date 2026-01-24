@@ -1,5 +1,15 @@
 import React from "react";
 
+// Add dynamic metadata
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const food = await getSingleFood(id);
+  return {
+    title: food.title,
+    description: food.description,
+  };
+}
+
 const getSingleFood = async (id) => {
   const res = await fetch(
     `https://taxi-kitchen-api.vercel.app/api/v1/foods/${id}`,
