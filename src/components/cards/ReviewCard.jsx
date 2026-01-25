@@ -1,6 +1,9 @@
 "use client";
+import { Anek_Bangla } from "next/font/google";
 import Image from "next/image";
 import { useState } from "react";
+
+
 
 export default function ReviewCard({ review }) {
   const { user, email, photo, rating, review: text, likes, date } = review;
