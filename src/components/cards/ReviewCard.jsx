@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function ReviewCard({ review }) {
@@ -16,11 +17,12 @@ export default function ReviewCard({ review }) {
     <div className="border rounded-xl p-5 shadow-md bg-white hover:shadow-lg transition">
       {/* User Info */}
       <div className="flex items-center gap-4">
-        <img
+        {/* <img
           src={photo}
           alt={user}
           className="w-14 h-14 rounded-full object-cover border"
-        />
+        /> */}
+        <Image src={photo} alt={user} width={100} height={100} className="w-14 h-14 rounded-full object-cover border"></Image>
 
         <div>
           <h3 className="font-semibold text-lg">{user}</h3>
