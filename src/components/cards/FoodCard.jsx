@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import style from "@/app/foods/foods.module.css";
 import CartButton from "../buttons/CartButton";
+import Image from "next/image";
 
 export default function FoodCard({ item: food }) {
   const { title, foodImg, category, price, id } = food;
@@ -10,11 +11,13 @@ export default function FoodCard({ item: food }) {
     <div
       className={`border rounded-xl p-4 shadow hover:shadow-lg transition ${style.bgred}`}
     >
-      <img
+      {/* <img
         src={foodImg}
         alt={title}
         className="w-full h-44 object-cover rounded-lg"
-      />
+      /> */}
+
+      <Image src={foodImg} alt={title} width={300} height={300} className="w-full h-44 object-cover rounded-lg"></Image>
 
       <div className="mt-3">
         <h2 className="text-lg font-semibold">{title}</h2>
