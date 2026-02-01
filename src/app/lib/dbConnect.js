@@ -10,7 +10,7 @@ const client = new MongoClient(uri, {
   },
 });
 
-const dbConnect = async (collection) => {
+export const dbConnect = async (collection) => {
   const database = process.env.DB_NAME;
   await client.connect();
   return client.db(database).collection(collection);

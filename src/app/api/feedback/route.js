@@ -1,15 +1,23 @@
-import { feedback } from "../route";
+import { dbConnect } from "@/app/lib/dbConnect";
+
+
+const feedbackCollection = await dbConnect("feedback");
 
 export async function GET(request) {
-  return Response.json(feedback);
+  const result = await feedbackCollection.find().toArray();
+  return Response.json({ status: 200, data: result });
 }
 
 export async function POST(request) {
   const {message} = await request.json();
 
-  return Response.json({
-    status: 200,
-    message: "Feedback created",
-    data,
-  });
+  if (!message) {
+    return Response.json({
+      status: 400,
+      message: "Please provide a message",
+    });
+  }
+  const newFeedback = {message, date: new Date().toISOString()};
+  const result = await feedbackCollection.insertOne(newFeedback);
+  return Response.json(result);
 } 
