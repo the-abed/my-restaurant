@@ -10,12 +10,8 @@ const client = new MongoClient(uri, {
   },
 });
 
-export default async function dbConnect() {
-  try {
-    await client.connect();
-    return client;
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
-}
+const dbConnect = async (collection) => {
+  const database = process.env.DB_NAME;
+  await client.connect();
+  return client.db(database).collection(collection);
+};
