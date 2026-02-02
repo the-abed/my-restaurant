@@ -13,6 +13,9 @@ const Navbar = () => {
         <Link href="/reviews">
           <li className="btn font-semibold">Reviews</li>
         </Link>
+        <Link href="/feedback">
+          <li className="btn font-semibold">Feedbacks</li>
+        </Link>
       </ul>
     </div>
   );
