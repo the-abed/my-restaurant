@@ -1,22 +1,37 @@
-import React from 'react';
+import React from "react";
 export const metadata = {
-    title: "All Feedbacks",
-    description: "Get your favorite feedbacks",
-}
+  title: "All Feedbacks",
+  description: "Get your favorite feedbacks",
+};
 
 const getFeedback = async () => {
-    const res = await fetch('http://localhost:3000/api/feedback/');
-    const data = await res.json();
-    return data;
-}
+  const res = await fetch("http://localhost:3000/api/feedback/");
+  return res.json();
+};
 
 const Feedback = async () => {
-    const feedback = await getFeedback();
-    return (
-        <div>
-            <h2 className="text-4xl font-bold">Feedback Page <span className="text-yellow-500">{feedback.length}</span> </h2>
-        </div>
-    );
+  const feedback = await getFeedback();
+  console.log(feedback);
+  return (
+    <div>
+      <h2 className="text-4xl font-bold">
+        <span className="text-yellow-500">{feedback.length} </span>Feedback
+        Found{" "}
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {feedback.map((feed) => (
+          <div
+            key={feed.id}
+            className="border border-gray-300 p-4 rounded-lg mb-4 mt-4"
+          >
+            <h2 className="text-lg font-semibold">Feedback </h2>
+            <p className="text-gray-600">{feed.message}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Feedback;

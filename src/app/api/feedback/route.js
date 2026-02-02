@@ -5,7 +5,7 @@ const feedbackCollection = await dbConnect("feedback");
 
 export async function GET(request) {
   const result = await feedbackCollection.find().toArray();
-  return Response.json({ status: 200, data: result });
+  return Response.json(result);
 }
 
 export async function POST(request) {
