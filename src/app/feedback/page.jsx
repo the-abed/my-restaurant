@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 export const metadata = {
   title: "All Feedbacks",
@@ -18,6 +19,11 @@ const Feedback = async () => {
         <span className="text-yellow-500">{feedback.length} </span>Feedback
         Found{" "}
       </h2>
+     
+     <div className="py-4">
+
+<Link href="/feedback/add" className="btn"> Add Feedback</Link>
+     </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {feedback.map((feed) => (
