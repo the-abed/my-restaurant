@@ -1,8 +1,10 @@
 "use client";
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
 const FeedbackForm = () => {
   const [feedback, setFeedback] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +29,7 @@ const FeedbackForm = () => {
     // Reset form after submission
     setFeedback("");
     alert("Thanks for your feedback!");
+    router.push("/feedback");
   };
 
   return (
