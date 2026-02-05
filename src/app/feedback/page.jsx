@@ -39,6 +39,13 @@ const Feedback = async () => {
             className="bg-white border border-gray-300 p-4 rounded-lg mb-4 mt-4"
           >
             <p className="text-gray-600">{feed.message}</p>
+            <p className="text-gray-600 mt-2">
+              {new Date(feed.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })} ,  {new Date(feed.date).toLocaleTimeString("en-US")}
+            </p>
             <div className="flex gap-4 mt-4">
               <button className="px-4 py-1 bg-yellow-500 text-white rounded">
                 Edit
