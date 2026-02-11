@@ -17,8 +17,8 @@ const InputSearch = () => {
   };
 
   return (
-    <div className="py-3 flex justify-center">
-      <form onSubmit={handleSubmit}>
+    <div className="py-3 flex gap-2">
+      <form onSubmit={handleSubmit} className="flex gap-2">
         <input
           type="text"
           name="search"
