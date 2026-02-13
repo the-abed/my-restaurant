@@ -14,7 +14,7 @@ const CartButton = ({ food }) => {
     <button
       onClick={handleadd2Cart}
       disabled={inCart}
-      className="flex-1 bg-blue-600 text-white py-2 rounded-lg px-1 hover:bg-blue-700 disabled:bg-gray-200 disabled:text-gray-600 disabled:px-6"
+      className="flex-1 bg-blue-600 text-white py-2 rounded-lg px-4 lg:px-1.5  hover:bg-blue-700 disabled:bg-gray-200 disabled:text-gray-600 disabled:px-6"
     >
       {inCart ? "Added" : "Add to Cart"}
     </button>

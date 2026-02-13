@@ -20,7 +20,7 @@ export default function FoodCard({ item: food }) {
           priority={false}
         />
         {/* Category Badge Overlay */}
-        <span className="absolute top-2 left-2 bg-white/90 backdrop-blur-md px-2 py-1 text-[10px] font-bold uppercase tracking-wider rounded-md shadow-sm">
+        <span className="absolute top-2 left-2  backdrop-blur-md px-2 py-1 text-[10px] font-bold uppercase tracking-wider rounded-md shadow-sm">
           {category}
         </span>
       </div>

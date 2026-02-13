@@ -5,9 +5,10 @@ export const metadata = {
   description: "Get your favorite feedbacks",
 };
 
+export const dynamic = "force-dynamic";
 const getFeedback = async () => {
   const res = await fetch("http://localhost:3000/api/feedback/", {
-    cache: "force-cache",
+    // cache: "force-cache",
     next: {
       revalidate: 30,
     },
