@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+---
 
-First, run the development server:
+# 🍽️ My Restaurant
+
+**My Restaurant** is a modern web application built with **Next.js** where users can explore various kinds of food items and place orders easily. The project focuses on clean UI, simple navigation, and basic full-stack functionality using modern web technologies.
+
+---
+
+## 🚀 Features
+
+*  Beautiful and responsive homepage
+*  Browse different types of food items
+*  Food details page
+*  Add to cart functionality
+*  Order system (basic implementation)
+*  Fully responsive design
+*  Fast performance using Next.js
+
+---
+
+## 🛠️ Built With
+
+* **Next.js** – React Framework
+* **React.js** – UI Library
+* **JavaScript (ES6+)**
+* **CSS / Tailwind CSS** (if you used it, otherwise remove)
+
+---
+
+## 📂 Project Structure (Basic)
+
+```
+my-restaurant/
+│── components/
+│── pages/ or app/
+│── public/
+│── styles/
+│── package.json
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/my-restaurant.git
+```
+
+2️⃣ Go to project folder
+
+```bash
+cd my-restaurant
+```
+
+3️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+4️⃣ Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now open 👉 `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Purpose of This Project
 
-## Learn More
+This project was built to practice:
 
-To learn more about Next.js, take a look at the following resources:
+* Next.js fundamentals
+* Component-based architecture
+* Routing system
+* Basic state management
+* Building a responsive UI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔮 Future Improvements
 
-## Deploy on Vercel
+* User authentication
+* Payment integration
+* Admin dashboard
+* Database integration
+* Order tracking system
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👨‍💻 Author
+
+**Mohammad Abed**
+Junior MERN Stack Developer
+
+GitHub: *(Add your GitHub link here)*
+Portfolio: *(Add your portfolio link here)*
+
+---
+
