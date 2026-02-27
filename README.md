@@ -1,4 +1,3 @@
-
 ---
 
 # 🍽️ My Restaurant
@@ -24,7 +23,7 @@
 * **Next.js** – React Framework
 * **React.js** – UI Library
 * **JavaScript (ES6+)**
-* **CSS / Tailwind CSS** (if you used it, otherwise remove)
+* **CSS / Tailwind CSS** 
 
 ---
 
@@ -98,8 +97,6 @@ This project was built to practice:
 **Mohammad Abed**
 Junior MERN Stack Developer
 
-GitHub: *(Add your GitHub link here)*
-Portfolio: *(Add your portfolio link here)*
 
 ---
 
