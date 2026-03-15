@@ -96,6 +96,7 @@ This project was built to practice:
 ## 👨‍💻 Author
 
 **Mohammad Abed**
+
 Junior MERN Stack Developer
 
 
